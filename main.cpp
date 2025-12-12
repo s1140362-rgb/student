@@ -3,16 +3,14 @@ using namespace std;
 
 int main()
 {
-    int password = 7;
-    int enterKey;
-    
-    cout << "輸入密碼數字(1~10):";
-    cin >> enterKey;
-    while (password != enterKey) {
-        cout << "密碼錯誤再次輸入(1~10):";
-        cin >> enterKey;
+    int subject = 5;
+    int grade[5] = {95,10,30,80,60};
+    int sum = 0;
+    for (int i=0; i<5; i++) {
+        sum = sum + grade[i];
     }
-    cout << "密碼正確遊戲結束" << endl;
-
+    int average = sum/subject;
+    cout <<"段考平均為:" << average;
     return 0;
+    
 }
