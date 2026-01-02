@@ -1,15 +1,23 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    int score[3] = {97, 66, 47};
+    int score[6] = {92, 85, 88, 77, 68, 55};
     int temp;
     
-    temp = score[0];
-    score[0] = score[2];
-    score[2] = temp;
-    for (int i=0;i<3;i++) {
-        std::cout << score[i] << " ";
+    for (int i=1; i<6;j++ ) {
+        for (int j=0; j < 6-i ;j++ ) {
+            if (score[j] > score[j+1] ) {
+                temp = score[j];
+                score[j] = score[j+1];
+                score[j+1] = temp;
+            }
+        }
+    }
+    cout << "成績遞增排序" << endl;
+    for (int i=0; i<6; i++) {
+        cout << score[i] << " ";
     }
 
     return 0;
