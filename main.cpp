@@ -3,21 +3,20 @@ using namespace std;
 
 int main()
 {
-    int score[6] = {92, 85, 88, 77, 68, 55};
-    int temp;
+    int code[8] = {92, 85, 88, 77, 86, 55, 68, 45};
+    int taget = 68; 
+    int found = -1;
     
-    for (int i=1; i<6;j++ ) {
-        for (int j=0; j < 6-i ;j++ ) {
-            if (score[j] > score[j+1] ) {
-                temp = score[j];
-                score[j] = score[j+1];
-                score[j+1] = temp;
-            }
+    for (int i=0; i<8; i++) {
+         if (code[i] == taget) {
+            found = i;
+            cout << "找到目標:" << taget << " 位於陣列所引: " << i ;
+            break;
         }
+        // == != < > >= <=
     }
-    cout << "成績遞增排序" << endl;
-    for (int i=0; i<6; i++) {
-        cout << score[i] << " ";
+    if (found == -1) {
+        cout << "找不到目標";
     }
 
     return 0;
